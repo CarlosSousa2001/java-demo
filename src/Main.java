@@ -42,12 +42,18 @@ public class Main {
 
         System.out.println("_--------------------------------_");
 
-        System.out.println("TSTE 4: SELLER update");
+        System.out.println("TSTE 5: SELLER update");
 
         seller = sellerDao.findById(1);
         seller.setName("Carlos");
         sellerDao.update(seller);
         System.out.println("Update completed");
 
+        System.out.println("_--------------------------------_");
+
+        System.out.println("TSTE 6: SELLER DELETE");
+
+        sellerDao.deleteById(1);
+        System.out.println("Deledadoc com sucesso");
     }
 }
