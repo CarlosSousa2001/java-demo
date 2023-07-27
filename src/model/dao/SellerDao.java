@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface SellerDao {
     void insert(Seller obj) throws SQLException;
-    void update(Seller obj);
+    void update(Seller obj) throws SQLException;
     void deleteById(Integer id);
     Seller findById(Integer id) throws SQLException;
     List<Seller> findAll();

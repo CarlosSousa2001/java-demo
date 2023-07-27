@@ -39,5 +39,15 @@ public class Main {
         Seller newSeller = new Seller(null, "Vinicius", "vini@gmail.com", new Date(), 4000.00, new Department(3, null));
         sellerDao.insert(newSeller);
         System.out.println("Número do id "+newSeller.getId());
+
+        System.out.println("_--------------------------------_");
+
+        System.out.println("TSTE 4: SELLER update");
+
+        seller = sellerDao.findById(1);
+        seller.setName("Carlos");
+        sellerDao.update(seller);
+        System.out.println("Update completed");
+
     }
 }
