@@ -26,12 +26,18 @@ public class Main {
         }
         System.out.println("_--------------------------------_");
 
-        System.out.println("TSTE 2: SELLER findAll");
+        System.out.println("TSTE 3: SELLER findAll");
         List<Seller> lista = sellerDao.findAll();
 
         for(Seller obj : lista){
             System.out.println(obj);
         }
 
+        System.out.println("_--------------------------------_");
+
+        System.out.println("TSTE 4: SELLER Insert");
+        Seller newSeller = new Seller(null, "Vinicius", "vini@gmail.com", new Date(), 4000.00, new Department(3, null));
+        sellerDao.insert(newSeller);
+        System.out.println("Número do id "+newSeller.getId());
     }
 }
