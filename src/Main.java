@@ -1,5 +1,9 @@
+import entities.Department;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Department department = new Department(10, "teste/QA");
+
+        System.out.println(department.toString());
     }
 }
