@@ -1,9 +1,19 @@
 import entities.Department;
+import entities.Seller;
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
+
+import java.sql.SQLException;
+import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
-        Department department = new Department(10, "teste/QA");
+    public static void main(String[] args) throws SQLException {
 
-        System.out.println(department.toString());
+        SellerDao sellerDao = DaoFactory.createSellerDao();
+
+        Seller seller = sellerDao.findById(2);
+
+        System.out.println(seller);
+
     }
 }
